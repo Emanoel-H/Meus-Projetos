@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Calculator {
     // This is a simple calculator program that can only take integers so far...
     Scanner scanner = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     public void showMenu (){
         System.out.println("===========================================");
         System.out.println("         Welcome to the calculator         ");
@@ -58,8 +59,9 @@ public class Calculator {
                     break;
                 case 6:
                     System.out.println("Type a valid value: ");
-                    a = scanner.nextInt();
-                    squareRoot(a);
+                    a = sc.nextInt();
+                    double sqrt = squareRoot(a);
+                    System.out.println("The square root of "+ a + " is: " + sqrt);
                     break;
                 case 7:
                     System.out.println("Type a valid value: ");
@@ -73,6 +75,7 @@ public class Calculator {
                     b = scanner.nextInt();
                     System.out.println("The number " + a + " raised to the " +
                             "power of "+ b + " is: " + Math.pow(a, b));
+                    break;
                 case 9:
                     System.out.println("Exiting program...");
                     break;
@@ -89,8 +92,8 @@ public class Calculator {
         System.out.println("The square of " + baseA + " is: " + baseA * baseA);
     }
 
-    public static void squareRoot(int base) {
-        Math.sqrt(base);
+    public static double squareRoot(int base) {
+        return Math.sqrt(base);
     }
 
     public static void factorial(int number) {
