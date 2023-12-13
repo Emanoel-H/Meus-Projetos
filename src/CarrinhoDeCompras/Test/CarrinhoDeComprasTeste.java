@@ -9,7 +9,17 @@ public class CarrinhoDeComprasTeste {
     public static void main(String[] args) {
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
         Scanner sc = new Scanner(System.in);
+        int input = 0;
 
+        while (input != 9){
+            carrinho.exibirMenu();
+            input = sc.nextInt();
+            carrinho.runClass(input);
+        }
+        System.out.println();
+        sc.close();
+
+        /*
         //Adicionando itens ao carrinho:
         carrinho.adicionarItem("Banana da Prata", 2.50, 2);
         carrinho.adicionarItem("Ovos", 17.75, 2);
@@ -23,6 +33,6 @@ public class CarrinhoDeComprasTeste {
         System.out.println(carrinho.calcularValorTotal());
 
         //exibindo itens:
-        carrinho.exibirItens();
+        carrinho.exibirItens();*/
     }
 }
