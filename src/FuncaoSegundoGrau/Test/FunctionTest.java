@@ -1,6 +1,6 @@
-package FuncaoPrimeiroGrau.Test;
+package FuncaoSegundoGrau.Test;
 
-import FuncaoPrimeiroGrau.Domain.FunctionCaller;
+import FuncaoSegundoGrau.Domain.FunctionCaller;
 
 import java.util.Scanner;
 

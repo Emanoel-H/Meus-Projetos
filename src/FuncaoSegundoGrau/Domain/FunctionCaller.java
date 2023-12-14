@@ -1,4 +1,4 @@
-package FuncaoPrimeiroGrau.Domain;
+package FuncaoSegundoGrau.Domain;
 
 import java.lang.Math;
 
@@ -7,7 +7,7 @@ public class FunctionCaller {
 
     public void displayMenu(){
         System.out.println("=================================================");
-        System.out.println("                 função do 1º grau               ");
+        System.out.println("                 função do 2º grau               ");
         System.out.println("                Δ = b^2 - 4 * a * c              ");
         System.out.println("               x = (-b +- √Δ) / 2 * a            ");
         System.out.println("=================================================");
