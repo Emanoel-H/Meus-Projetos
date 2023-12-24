@@ -1,6 +1,8 @@
 package BankSystem.Domain;
 
-public class Cliente {
+import java.util.Objects;
+
+public class Cliente implements Comparable<Cliente>{
     private String nome;
     private String cpf;
     private String username;
@@ -20,6 +22,19 @@ public class Cliente {
         this.cpf = cpf;
         this.username = username;
         this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Cliente)) return false;
+        Cliente cliente = (Cliente) o;
+        return Objects.equals(getPassword(), cliente.getPassword());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getPassword());
     }
 
     public String getNome() {
@@ -57,5 +72,10 @@ public class Cliente {
     @Override
     public String toString() {
         return "Cliente: " + nome + ". CPF: " + cpf;
+    }
+
+    @Override
+    public int compareTo(Cliente o) {
+        return nome.compareToIgnoreCase(o.getNome());
     }
 }
