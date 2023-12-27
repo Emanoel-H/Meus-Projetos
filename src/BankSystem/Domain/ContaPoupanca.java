@@ -9,7 +9,7 @@ public class ContaPoupanca extends Conta{
     @Override
     public String toString() {
         return "Conta Poupança: " + getNumero() + " Agência: " + getAgencia()
-                + " Saldo: " + getSaldo() + " Titular: " + getTitular().getNome();
+                + " Saldo: " + getSaldo() + " Titular: " + getTitular().getNome() + " Username: " + getTitular().getUsername();
     }
 
 }

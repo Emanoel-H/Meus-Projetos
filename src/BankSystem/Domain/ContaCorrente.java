@@ -9,6 +9,6 @@ public class ContaCorrente extends Conta{
     @Override
     public String toString() {
         return "Conta Corrente: " + getNumero() + " Agência: " + getAgencia()
-                + " Saldo: " + getSaldo() + " Titular: " + getTitular().getNome();
+                + " Saldo: " + getSaldo() + " Titular: " + getTitular().getNome() + " Username: " + getTitular().getUsername();
     }
 }
