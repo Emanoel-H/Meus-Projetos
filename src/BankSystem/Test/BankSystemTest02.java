@@ -1,5 +1,6 @@
 package BankSystem.Test;
 
+import BankSystem.Domain.Cliente;
 import BankSystem.Domain.ContaPoupanca;
 import BankSystem.Domain.SignUpSystem;
 
@@ -20,10 +21,10 @@ public class BankSystemTest02 {
         System.out.println(signUpSystem.getClienteByUsername("Bimbao"));
 
 
-        /*
+
         signUpSystem.atualizarCliente("Acerola", signUpSystem.getClienteByUsername("Acerola"),
-                new Cliente("Catarina Catarrenta", "12345678", "cat", "raissa"));
-        System.out.println(signUpSystem.getClienteByUsername("cat"));*/
+                new Cliente("Catarina Catarrenta", "12345678", "Acerola", "ronaldo"));
+        System.out.println(signUpSystem.getClienteByUsername("Acerola"));
 
         signUpSystem.atualizarConta("Acerola",
                 new ContaPoupanca(123, 531, 100, signUpSystem.getClienteByUsername("Acerola")));
